@@ -5,9 +5,8 @@ const kafka = new Kafka({
   brokers: ['shining-javelin-5021-us1-kafka.upstash.io:9092'],
   sasl: {
     mechanism: 'scram-sha-256',
-    username: 'c2hpbmluZy1qYXZlbGluLTUwMjEkPEeUtCHnK3xlinXaxxaXOz9s05CPs1U4leI',
-    password:
-      'c-Ab6v6D7Aj8DFuyGNWsxUFKmqqLMjyqZFtT6TqUc9BEJW3dAxl4RAlGb3RVEZAho6FeUQ==',
+    username: process.env.KAFKA_USERNAME,
+    password: process.env.KAFKA_PASS,
   },
   ssl: true,
 });
